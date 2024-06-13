@@ -67,6 +67,13 @@ namespace com.insanitydesign.MarkdownViewerPlusPlus.Forms
             this.markdownViewerHtmlPanel.ScrollByRatioVertically(scrollRatio);
         }
 
+        public bool IsAbsoluteUrl(string url)
+        {
+            Uri result;
+            return Uri.TryCreate(url, UriKind.Absolute, out result);
+        }
+
+
         /// <summary>
         /// Custom renderer for SVG images in the markdown as not supported natively.
         /// @see https://htmlrenderer.codeplex.com/wikipage?title=Rendering%20SVG%20images
@@ -79,32 +86,43 @@ namespace com.insanitydesign.MarkdownViewerPlusPlus.Forms
             {
                 //Get some file information
                 string src = imageLoadEvent.Src;
-                Uri uri = new Uri(src);
-                string extension = Path.GetExtension(src);
-
-                //Check if local file or web resource
-                switch (uri.Scheme.ToLowerInvariant())
+               
+                if (IsAbsoluteUrl(src))
                 {
-                    case "file":
-                        //In case of a local file -> Try to load it directly
-                        imageLoadEvent.Handled = true; //Tell the event it was handled, so no error border is drawn
-                        ThreadPool.QueueUserWorkItem(state => LoadImageFromFile(src, imageLoadEvent));
-                        break;
-                    case "http":
-                    case "https":
-                        //For web resources check extension and parameter, to fetch from e.g. "badge" creating sources
-                        if ((extension != null && extension.Equals(".svg", StringComparison.OrdinalIgnoreCase))
-                            || uri.ToString().Contains("svg="))
-                        {
-                            //In case of a web resource file -> Load async
-                            using (WebClient webClient = new WebClient())
+                    Uri uri = new Uri(src);
+                    string extension = Path.GetExtension(src);
+
+                    //Check if local file or web resource
+                    switch (uri.Scheme.ToLowerInvariant())
+                    {
+                        case "file":
+                            //In case of a local file -> Try to load it directly
+                            imageLoadEvent.Handled = true; //Tell the event it was handled, so no error border is drawn
+                            ThreadPool.QueueUserWorkItem(state => LoadImageFromFile(src, imageLoadEvent));
+                            break;
+                        case "http":
+                        case "https":
+                            //For web resources check extension and parameter, to fetch from e.g. "badge" creating sources
+                            if ((extension != null && extension.Equals(".svg", StringComparison.OrdinalIgnoreCase))
+                                || uri.ToString().Contains("svg="))
                             {
-                                imageLoadEvent.Handled = true; //Tell the event it was handled, so no error border is drawn
-                                webClient.DownloadDataCompleted += (downloadSender, downloadEvent) => { OnDownloadDataCompleted(downloadEvent, imageLoadEvent); };
-                                webClient.DownloadDataAsync(uri);
+                                //In case of a web resource file -> Load async
+                                using (WebClient webClient = new WebClient())
+                                {
+                                    imageLoadEvent.Handled = true; //Tell the event it was handled, so no error border is drawn
+                                    webClient.DownloadDataCompleted += (downloadSender, downloadEvent) => { OnDownloadDataCompleted(downloadEvent, imageLoadEvent); };
+                                    webClient.DownloadDataAsync(uri);
+                                }
                             }
-                        }
-                        break;
+                            break;
+                    }
+                }
+                else
+                {
+                    //Local file from relative path -> Try to load it directly
+                    imageLoadEvent.Handled = true; //Tell the event it was handled, so no error border is drawn
+                    ThreadPool.QueueUserWorkItem(state => LoadImageFromFile(@"file:///" + this.FileInfo.FileDirectory + "/" + src, imageLoadEvent));
+
                 }
 
             }
