@@ -158,7 +158,7 @@ namespace com.insanitydesign.MarkdownViewerPlusPlus.Forms
             this.aboutToolStripMenuItem1});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(24, 20);
-            this.aboutToolStripMenuItem.Text = "?";
+            this.aboutToolStripMenuItem.Text = "? @bhu1st";
             // 
             // optionsToolStripMenuItem
             // 
