@@ -97,7 +97,7 @@ This source and the whole package comes without warranty. It may or may not harm
 
 ## Personal Note
 
-I used MarkdownViewerPlusPlus for viewing the preview of my Markdown files and found out that the plugin doesn't render images with relative paths. So, I built the [MarkdownViewerPlusPlus][14] code in Visual Studio Community Edition 2022 and fixed the relative image rendering issue. Latest code can be found at [NppMarkdownViewer][15] - *Bhupal Sapkota*.
+I used MarkdownViewerPlusPlus for previewing my Markdown files and found out that the plugin doesn't render local images with relative paths. So, I built the [MarkdownViewerPlusPlus][14] code in Visual Studio Community Edition 2022 and fixed the relative image rendering issue. Latest code can be found at [NppMarkdownViewer][15] - *Bhupal Sapkota*.
 
 *I don't know if this is very useful for a lot of people but I wanted something in private to quickly write and see some formatted Markdown documents. As I was not able to find something similar very quickly I created this project. I hope this proves useful to you... with all its Bugs and Issues ;) If you like it you can give me a shout at [INsanityDesign][1] or let me know via this repository.*
 
