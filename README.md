@@ -1,4 +1,6 @@
-# MarkdownViewerPlusPlus [![Build status](https://ci.appveyor.com/api/projects/status/jkuuth039vioms74?svg=true)](https://ci.appveyor.com/project/nea/markdownviewerplusplus) [![GitHub license](https://img.shields.io/github/license/nea/MarkdownViewerPlusPlus.svg)](https://github.com/nea/MarkdownViewerPlusPlus/blob/master/LICENSE.md) [![GitHub (pre-)release](https://img.shields.io/badge/release-0.8.2-yellow.svg)](https://github.com/nea/MarkdownViewerPlusPlus/releases/tag/0.8.2) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/insanitydesign)
+# NppMarkdownViewer 
+[Buy Me a Coffee](https://buymeacoffee.com/bhu1st)
+
 A Notepad++ Plugin to view a Markdown file rendered on-the-fly
 
 ## Features
@@ -10,6 +12,8 @@ A Notepad++ Plugin to view a Markdown file rendered on-the-fly
 * Notepad++ Unicode Plugin
 
 ## Latest Versions
+* 0.8.3
+  * Fixed rendering of local image with relative path, thanks to [Wallby](https://github.com/Wallby)
 * 0.8.2
   * Merged a lot of bugfixes and improvements, thanks to [monoblaine](https://github.com/monoblaine)
   * Updated [Markdig][3] to v0.15.0, [PDFSharp][5] to v1.50.4845-RC2a and [HTMLRenderer][6] accordingly
@@ -88,9 +92,13 @@ This Notepad++ plugin integrates the sources of multiple other libraries, becaus
 * The Markdown icon is by [dcurtis][8] provided under the CC0-1.0 license
 
 ## Disclaimer
+
 This source and the whole package comes without warranty. It may or may not harm your computer or cell phone. Please use with care. Any damage cannot be related back to the author. The source has been tested on a virtual environment and scanned for viruses and has passed all tests.
 
 ## Personal Note
+
+I used MarkdownViewerPlusPlus for viewing the preview of my Markdown files and found out that the plugin doesn't render images with relative paths. So, I built the [MarkdownViewerPlusPlus][14] code in Visual Studio Community Edition 2022 and fixed the relative image rendering issue. Latest code can be found at [NppMarkdownViewer][15] - *Bhupal Sapkota*.
+
 *I don't know if this is very useful for a lot of people but I wanted something in private to quickly write and see some formatted Markdown documents. As I was not able to find something similar very quickly I created this project. I hope this proves useful to you... with all its Bugs and Issues ;) If you like it you can give me a shout at [INsanityDesign][1] or let me know via this repository.*
 
   [1]: http://www.insanitydesign.com/
@@ -106,3 +114,6 @@ This source and the whole package comes without warranty. It may or may not harm
   [11]: https://github.com/vvvv/SVG
   [12]: https://github.com/Edditoria/markdown-plus-plus
   [13]: https://bruderste.in/npp/pm/
+  [14]: https://github.com/nea/MarkdownViewerPlusPlus/
+  [15]: https://github.com/bhu1st/NppMarkdownViewer
+  

@@ -37,9 +37,10 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(212, 254);
+            this.btnClose.Location = new System.Drawing.Point(325, 313);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(94, 23);
+            this.btnClose.Size = new System.Drawing.Size(83, 28);
             this.btnClose.TabIndex = 0;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -47,9 +48,10 @@
             // 
             // btnVisit
             // 
-            this.btnVisit.Location = new System.Drawing.Point(12, 254);
+            this.btnVisit.Location = new System.Drawing.Point(13, 313);
+            this.btnVisit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVisit.Name = "btnVisit";
-            this.btnVisit.Size = new System.Drawing.Size(94, 23);
+            this.btnVisit.Size = new System.Drawing.Size(104, 28);
             this.btnVisit.TabIndex = 1;
             this.btnVisit.Text = "Visit Website";
             this.btnVisit.UseVisualStyleBackColor = true;
@@ -57,19 +59,21 @@
             // 
             // lblAbout
             // 
-            this.lblAbout.Location = new System.Drawing.Point(13, 13);
+            this.lblAbout.Location = new System.Drawing.Point(17, 16);
+            this.lblAbout.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAbout.Name = "lblAbout";
-            this.lblAbout.Size = new System.Drawing.Size(259, 238);
+            this.lblAbout.Size = new System.Drawing.Size(345, 293);
             this.lblAbout.TabIndex = 2;
             // 
             // picBoxDonate
             // 
             this.picBoxDonate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picBoxDonate.Image = global::com.insanitydesign.MarkdownViewerPlusPlus.Properties.Resources.Donate_PayPal_green;
+            this.picBoxDonate.Image = global::com.insanitydesign.MarkdownViewerPlusPlus.Properties.Resources.bmc;
             this.picBoxDonate.InitialImage = null;
-            this.picBoxDonate.Location = new System.Drawing.Point(112, 254);
+            this.picBoxDonate.Location = new System.Drawing.Point(137, 304);
+            this.picBoxDonate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picBoxDonate.Name = "picBoxDonate";
-            this.picBoxDonate.Size = new System.Drawing.Size(94, 23);
+            this.picBoxDonate.Size = new System.Drawing.Size(160, 42);
             this.picBoxDonate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picBoxDonate.TabIndex = 3;
             this.picBoxDonate.TabStop = false;
@@ -77,14 +81,15 @@
             // 
             // AboutDialog
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(318, 289);
+            this.ClientSize = new System.Drawing.Size(424, 356);
             this.Controls.Add(this.picBoxDonate);
             this.Controls.Add(this.lblAbout);
             this.Controls.Add(this.btnVisit);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AboutDialog";

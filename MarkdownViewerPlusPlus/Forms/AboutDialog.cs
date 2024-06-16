@@ -60,7 +60,7 @@ For more information, visit the website or check the included README.md
         /// <param name="e"></param>
         private void btnVisit_Click(object sender, System.EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/nea/MarkdownViewerPlusPlus");
+            System.Diagnostics.Process.Start("https://github.com/bhu1st/NppMarkdownViewer");
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ For more information, visit the website or check the included README.md
         /// <param name="e"></param>
         private void picBoxDonate_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.paypal.me/insanitydesign");
+            System.Diagnostics.Process.Start("https://buymeacoffee.com/bhu1st");
         }
     }
 }

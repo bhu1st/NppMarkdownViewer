@@ -63,6 +63,16 @@ namespace com.insanitydesign.MarkdownViewerPlusPlus.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bmc {
+            get {
+                object obj = ResourceManager.GetObject("bmc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Donate_PayPal_green {
             get {
                 object obj = ResourceManager.GetObject("Donate_PayPal_green", resourceCulture);
