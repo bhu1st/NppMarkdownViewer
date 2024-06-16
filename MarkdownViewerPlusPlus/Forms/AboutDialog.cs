@@ -31,6 +31,7 @@ namespace com.insanitydesign.MarkdownViewerPlusPlus.Forms
 Version: {version}
 
 Many thanks to:
+  MarkdownViewerPlusPlus by nea
   Notepad++ PluginPack.net by kbilsted
   Markdig by lunet-io
   PDFSharp by empira Software GmbH
@@ -71,6 +72,11 @@ For more information, visit the website or check the included README.md
         private void picBoxDonate_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://buymeacoffee.com/bhu1st");
+        }
+
+        private void lblAbout_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

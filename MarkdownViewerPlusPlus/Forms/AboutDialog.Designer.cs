@@ -38,7 +38,7 @@
             // btnClose
             // 
             this.btnClose.Location = new System.Drawing.Point(325, 313);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(83, 28);
             this.btnClose.TabIndex = 0;
@@ -49,7 +49,7 @@
             // btnVisit
             // 
             this.btnVisit.Location = new System.Drawing.Point(13, 313);
-            this.btnVisit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVisit.Margin = new System.Windows.Forms.Padding(4);
             this.btnVisit.Name = "btnVisit";
             this.btnVisit.Size = new System.Drawing.Size(104, 28);
             this.btnVisit.TabIndex = 1;
@@ -64,6 +64,7 @@
             this.lblAbout.Name = "lblAbout";
             this.lblAbout.Size = new System.Drawing.Size(345, 293);
             this.lblAbout.TabIndex = 2;
+            this.lblAbout.Click += new System.EventHandler(this.lblAbout_Click);
             // 
             // picBoxDonate
             // 
@@ -71,7 +72,7 @@
             this.picBoxDonate.Image = global::com.insanitydesign.MarkdownViewerPlusPlus.Properties.Resources.bmc;
             this.picBoxDonate.InitialImage = null;
             this.picBoxDonate.Location = new System.Drawing.Point(137, 304);
-            this.picBoxDonate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picBoxDonate.Margin = new System.Windows.Forms.Padding(4);
             this.picBoxDonate.Name = "picBoxDonate";
             this.picBoxDonate.Size = new System.Drawing.Size(160, 42);
             this.picBoxDonate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -89,7 +90,7 @@
             this.Controls.Add(this.btnVisit);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AboutDialog";
